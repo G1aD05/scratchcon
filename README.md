@@ -96,8 +96,63 @@ user.get_join_date() # Returns the join date of the user
 user.is_st() # Returns if the user is scratch team
 ```
 
-## Requirements
+# scratchcon.actions
+## **How to use**
+**Type this into your python file**
+```python
+import scratchcon.actions as actions
+actions.login.login("username", "password")
 ```
-Python 3
+**That logs into scratch, now here are some things you can connect:**
+```python
+# Project
+actions.conn.connect_project() # Enter the project ID as an integer
+
+# Studio
+actions.conn.connect_studio() # Enter the Studio ID as an integer
+
+# COMING SOON: User
+actions.conn.connect_user() # Enter the username of the user
+
+# Once connected you must use this function:
+actions.actions.load() # This loads your set values 
+```
+**Now here are some things you can do with the `connect_project()` method:**
+```python
+proj_actions = actions.actions.Project()
+
+proj_actions.post_comment("message") # Post a comment
+
+proj_actions.love() # Love the project
+
+proj_actions.unlove() # Unlove the project
+
+proj_actions.favorite() # Favorite the project
+
+proj_actions.unfavorite() # Unfavorite the project
+
+proj_actions.download("filename", "dir") # Download the project
+```
+**Here are some things you can do with the `connect_studio()` method:**
+```python
+studio_actions = actions.actions.Studio()
+
+studio_actions.follow() # Follow the studio
+
+studio_actions.unfollow() # Unfollow the studio
+
+studio_actions.post_comment("message") # Post a comment
+
+studio_actions.remove("user") # Remove a user
+
+studio_actions.add_project("project id") # Enter the project ID as an integer
+
+studio_actions.invite("user") # Invite a user
+
+studio_actions.promote("user") # Promote a user
+```
+## Requirements
+```text
 requests
+scratchattach
 ```
