@@ -2,16 +2,18 @@ from setuptools import setup, find_packages
 
 setup(
     name='scratchcon',
-    version='1.1.1-beta',
+    version='1.2.3-beta',
     packages=find_packages(),
     install_requires=[
         'requests',
         'scratchattach',
+        'pyperclip',
+        'colorama',
     ],
     author='G1ad0s',
     author_email="on67703@gmail.com",
     description='A Python library for interacting with the scratch.mit.edu API',
-    long_description=open('README.rst').read(),
+    long_description="https://github.com/g1ad05/scratchcon",
     url='https://github.com/G1ad0s/scratchcon',
     license='MIT',
     classifiers=[
