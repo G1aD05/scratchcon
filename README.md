@@ -155,4 +155,18 @@ studio_actions.promote("user") # Promote a user
 ```text
 requests
 scratchattach
+pyperclip
+colorama
 ```
+
+# scratchcon.utils.auth
+## How to use
+Type the following into your project:
+```python
+import scratchcon.utils.auth as auth
+
+project: int = 1234567890
+authenticated, username = auth.authenticate_user(project_id=project)
+print(f"{username} has authenticated")
+```
+**And that's it, you have 2 minutes to comment the code on the project**
