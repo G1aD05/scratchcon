@@ -151,13 +151,6 @@ studio_actions.invite("user") # Invite a user
 
 studio_actions.promote("user") # Promote a user
 ```
-## Requirements
-```text
-requests
-scratchattach
-pyperclip
-colorama
-```
 
 # scratchcon.utils.auth
 ## How to use
@@ -170,3 +163,11 @@ authenticated, username = auth.authenticate_user(project_id=project)
 print(f"{username} has authenticated")
 ```
 **And that's it, you have 2 minutes to comment the code on the project**
+
+# Requirements
+```text
+requests
+scratchattach
+pyperclip
+colorama
+```
