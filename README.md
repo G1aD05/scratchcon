@@ -164,10 +164,4 @@ print(f"{username} has authenticated")
 ```
 **And that's it, you have 2 minutes to comment the code on the project**
 
-# Requirements
-```text
-requests
-scratchattach
-pyperclip
-colorama
-```
+#### Install the requirements using `pip install -r requirements.txt`
