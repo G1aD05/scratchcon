@@ -1,7 +1,14 @@
 # scratchcon
+
+## Requirements
+`pip install -r reqiurements.txt`
+
 ## How to use
+
 **First, run this command in your terminal (make sure you have a venv activated): `python3 -m pip install scratchcon`**\
+
 **Then create a python file and type:**
+
 ```python
 import scratchcon as con
 
@@ -9,6 +16,7 @@ conn = con.conn.Connect()
 ```
 
 **This sets up the connection class, here are some things you can connect:**
+
 ```python
 # Connect a project
 conn.conect_project() # Enter the project ID as an integer
@@ -19,7 +27,9 @@ conn.connect_studio() # Enter a studio ID as an integer
 # Connect a user
 conn.connect_user() # Enter the username as a string
 ```
+
 **Here are some things you can do with the `connect_project` function:**
+
 ```python
 project = con.project.Project()
 
@@ -49,6 +59,7 @@ project.get_remixes() # Returns all the remixes of the project in a list
 ```
 
 **Here are some things you can do with the `connect_studio` function:**
+
 ```python
 studio = con.studio.Studio()
 
@@ -76,6 +87,7 @@ studio.get_activity() # Returns a list of the activity in the studio
 ```
 
 **Here are some things you can do with the `connect_user` function**
+
 ```python
 user = con.user.User()
 
@@ -97,13 +109,18 @@ user.is_st() # Returns if the user is scratch team
 ```
 
 # scratchcon.actions
+
 ## **How to use**
+
 **Type this into your python file**
+
 ```python
 import scratchcon.actions as actions
 actions.login.login("username", "password")
 ```
+
 **That logs into scratch, now here are some things you can connect:**
+
 ```python
 # Project
 actions.conn.connect_project() # Enter the project ID as an integer
@@ -117,7 +134,9 @@ actions.conn.connect_user() # Enter the username of the user
 # Once connected you must use this function:
 actions.actions.load() # This loads your set values 
 ```
+
 **Now here are some things you can do with the `connect_project()` method:**
+
 ```python
 proj_actions = actions.actions.Project()
 
@@ -133,7 +152,9 @@ proj_actions.unfavorite() # Unfavorite the project
 
 proj_actions.download("filename", "dir") # Download the project
 ```
+
 **Here are some things you can do with the `connect_studio()` method:**
+
 ```python
 studio_actions = actions.actions.Studio()
 
@@ -151,16 +172,11 @@ studio_actions.invite("user") # Invite a user
 
 studio_actions.promote("user") # Promote a user
 ```
-## Requirements
-```text
-requests
-scratchattach
-pyperclip
-colorama
-```
 
 # scratchcon.utils
+
 ## Authenticating a User
+
 Type the following into your program:
 ```python
 import scratchcon.utils.auth as auth
@@ -170,7 +186,9 @@ authenticated, username = auth.authenticate_user(project_id=project)
 print(f"{username} has authenticated")
 ```
 And that's it, you have **2 minutes** to comment the code on the project
+
 ## Setting up a Filter Bot
+
 Type the following into your program:
 ```python
 import scratchcon.utils.filterbot as filter
@@ -186,4 +204,3 @@ filterbot = filter.Filter(project, preset="mode")
 # Whenever you want to start it you just type
 filterbot.start_filter()
 ```
-
