@@ -154,7 +154,7 @@ studio_actions.promote("user") # Promote a user
 
 # scratchcon.utils.auth
 ## How to use
-Type the following into your project:
+Type the following into your program:
 ```python
 import scratchcon.utils.auth as auth
 
@@ -164,4 +164,5 @@ print(f"{username} has authenticated")
 ```
 **And that's it, you have 2 minutes to comment the code on the project**
 
+# Requirements
 #### Install the requirements using `pip install -r requirements.txt`
