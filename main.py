@@ -1,9 +1,5 @@
-import scratchcon.utils.auth as auth
+from scratchcon.utils import filterbot as filter
+from scratchcon.actions import login
 
-authenticated: bool = False
-username = ""
-
-while not authenticated:
-    authenticated, username = auth.authenticate_user(1041557087)
-
-print()
+login.login("-G1ad0s-", "Glados")
+filter.Filter(1093981279, ['f4f', 'https://scratch.mit.edu/projects/']).start_filter()
