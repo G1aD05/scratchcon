@@ -7,3 +7,6 @@ def connect_project(proj_id):
 
 def connect_studio(studio_id):
     public.studio_id = studio_id
+
+def connect_user(username):
+    public.username = username
