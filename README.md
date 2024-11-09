@@ -175,7 +175,9 @@ Type the following into your program:
 ```python
 import scratchcon.utils.filterbot as filter
 
-filterbot = filter.Filter("Target project as int", ["keywords that the bot will", "delete"])
+project: int = 1234567890
+
+filterbot = filter.Filter(project, ["keywords that the bot will", "delete"])
 # Whenever you want to start it you just type
 filterbot.start_filter()
 ```
