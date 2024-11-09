@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: scratchcon
+Version: 1.2.5b0
+Summary: A Python library for interacting with the scratch.mit.edu API
+Home-page: https://github.com/G1ad0s/scratchcon
+Author: G1ad0s, webbrowser11
+Author-email: on67703@gmail.com, terpstragraham@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: scratchattach
+Requires-Dist: pyperclip
+Requires-Dist: colorama
+
+https://github.com/g1ad05/scratchcon
