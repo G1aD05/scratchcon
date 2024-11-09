@@ -1,14 +1,16 @@
-import scratchattach as sa
 from .common import public
+from scratchcon.exceptions import *
 
 project = None
 studio = None
+user = None
 
 
 def load():
-    global project, studio
+    global project, studio, user
     project = public.login.connect_project(public.project_id)
     studio = public.login.connect_studio(public.studio_id)
+    user = public.login.connect_user(public.username)
 
 
 class Project:
@@ -71,10 +73,19 @@ class Studio:
         studio.remove_curator(username)
 
 
-"""
-COMING SOON!
-
 class User:
-     @staticmethod
-     def
-"""
+    @staticmethod
+    def comment(message: str):
+        user.post_comment(message)
+
+    @staticmethod
+    def follow():
+        user.follow()
+
+    @staticmethod
+    def unfollow():
+        user.unfollow()
+
+    @staticmethod
+    def exists() -> str:
+        return user.does_exist()
