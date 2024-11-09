@@ -174,8 +174,10 @@ And that's it, you have **2 minutes** to comment the code on the project
 Type the following into your program:
 ```python
 import scratchcon.utils.filterbot as filter
+import scratchcon.actions as actions
 
 project: int = 1234567890
+actions.login.login("username", "password")
 
 filterbot = filter.Filter(project, ["keywords that the bot will", "delete"])
 # Whenever you want to start it you just type
