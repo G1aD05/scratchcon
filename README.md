@@ -180,6 +180,9 @@ project: int = 1234567890
 actions.login.login("username", "password")
 
 filterbot = filter.Filter(project, ["keywords that the bot will", "delete"])
+# Don't feel like adding your own keywords? There are presets!
+filterbot = filter.Filter(project, preset="mode")
+# Replace "mode" with light, medium or hard
 # Whenever you want to start it you just type
 filterbot.start_filter()
 ```
