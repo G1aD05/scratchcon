@@ -156,7 +156,7 @@ studio_actions.promote("user") # Promote a user
 ## How to use
 Type the following into your program:
 ```python
-import scratchcon.utils.auth as auth
+from scratchcon.utils import auth
 
 project: int = 1234567890
 authenticated, username = auth.authenticate_user(project_id=project)
