@@ -151,18 +151,32 @@ studio_actions.invite("user") # Invite a user
 
 studio_actions.promote("user") # Promote a user
 ```
+## Requirements
+```text
+requests
+scratchattach
+pyperclip
+colorama
+```
 
-# scratchcon.utils.auth
-## How to use
+# scratchcon.utils
+## Authenticating a User
 Type the following into your program:
 ```python
-from scratchcon.utils import auth
+import scratchcon.utils.auth as auth
 
 project: int = 1234567890
 authenticated, username = auth.authenticate_user(project_id=project)
 print(f"{username} has authenticated")
 ```
-**And that's it, you have 2 minutes to comment the code on the project**
+And that's it, you have **2 minutes** to comment the code on the project
+## Setting up a Filter Bot
+Type the following into your program:
+```python
+import scratchcon.utils.filterbot as filter
 
-# Requirements
-#### Install the requirements using `pip install -r requirements.txt`
+filterbot = filter.Filter("Target project as int", ["keywords that the bot will", "delete"])
+# Whenever you want to start it you just type
+filterbot.start_filter()
+```
+
