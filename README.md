@@ -1,4 +1,6 @@
 # scratchcon
+>[!Note]
+>Please suggest or make a pull request for any ideas you have
 ## How to use
 **First, run this command in your terminal (make sure you have a venv activated): `python3 -m pip install scratchcon`**\
 **Then create a python file and type:**
