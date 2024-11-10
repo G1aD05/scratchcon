@@ -3,7 +3,7 @@
 >Please suggest or make a pull request for any ideas you have
 
 ## Requirements
-`pip install -r requrements.txt`
+`pip install -r requirements.txt`
 
 ## How to use
 **First, run this command in your terminal (make sure you have a venv activated): `python3 -m pip install scratchcon`**\
