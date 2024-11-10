@@ -117,7 +117,7 @@ actions.conn.connect_project() # Enter the project ID as an integer
 # Studio
 actions.conn.connect_studio() # Enter the Studio ID as an integer
 
-# COMING SOON: User
+# User
 actions.conn.connect_user() # Enter the username of the user
 
 # Once connected you must use this function:
@@ -156,6 +156,19 @@ studio_actions.add_project("project id") # Enter the project ID as an integer
 studio_actions.invite("user") # Invite a user
 
 studio_actions.promote("user") # Promote a user
+```
+**Here are some things you can do with the `connect_user()` method**
+```python
+import scratchcon.actions as actions
+user_actions = actions.actions.User()
+
+user_actions.comment("message") # Post a comment
+
+user_actions.follow() # Follow the user
+
+user_actions.unfollow() # Unfollow the user
+
+user_actions.exists() # Check if the user exists
 ```
 
 # scratchcon.utils
