@@ -3,6 +3,7 @@ class Public:
     project_link = None
     studio_link = None
     login = None
+    project_id = None
 
 
 public = Public()

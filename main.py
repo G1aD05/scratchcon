@@ -1,7 +1,5 @@
-import scratchcon.utils.auth as auth
+import scratchcon.utils.filterbot as filter
+import scratchcon.actions.login as login
 
-authenticated: bool = False
-username = ""
-
-while not authenticated:
-    authenticated, username = auth.authenticate_user(1041557087)
+login.login("-G1ad0s-", "Glados")
+filter.Filter(1093981279, preset="light").start_filter()

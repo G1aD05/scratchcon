@@ -99,3 +99,11 @@ class Project:
             return response.json()
         else:
             raise FailedToRetrieve(f"Failed to retrieve project remixes: {response.status_code}")
+
+    @staticmethod
+    def get_comments():
+        response = requests.get(f"https://api.scratch.mit.edu/users/{requests.get(public.project_link).json()["author"]["username"]}/projects/{public.project_id}/comments")
+        if response.ok:
+            return response.json()
+        else:
+            raise FailedToRetrieve(f"Failed to retrieve project comments: {response.status_code}")

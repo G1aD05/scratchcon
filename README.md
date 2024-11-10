@@ -1,4 +1,10 @@
 # scratchcon
+>[!Note]
+>Please suggest or make a pull request for any ideas you have
+
+## Requirements
+`pip install -r requirements.txt`
+
 ## How to use
 **First, run this command in your terminal (make sure you have a venv activated): `python3 -m pip install scratchcon`**\
 **Then create a python file and type:**
@@ -111,7 +117,7 @@ actions.conn.connect_project() # Enter the project ID as an integer
 # Studio
 actions.conn.connect_studio() # Enter the Studio ID as an integer
 
-# COMING SOON: User
+# User
 actions.conn.connect_user() # Enter the username of the user
 
 # Once connected you must use this function:
@@ -151,12 +157,17 @@ studio_actions.invite("user") # Invite a user
 
 studio_actions.promote("user") # Promote a user
 ```
-## Requirements
-```text
-requests
-scratchattach
-pyperclip
-colorama
+**Here are some things you can do with the `connect_user()` method**
+```python
+user_actions = actions.actions.User()
+
+user_actions.comment("message") # Post a comment
+
+user_actions.follow() # Follow the user
+
+user_actions.unfollow() # Unfollow the user
+
+user_actions.exists() # Check if the user exists
 ```
 
 # scratchcon.utils
@@ -169,14 +180,20 @@ project: int = 1234567890
 authenticated, username = auth.authenticate_user(project_id=project)
 print(f"{username} has authenticated")
 ```
-And that's it, you have **<u>2 minutes</u>** to comment the code on the project
+And that's it, you have **2 minutes** to comment the code on the project
 ## Setting up a Filter Bot
 Type the following into your program:
 ```python
 import scratchcon.utils.filterbot as filter
+import scratchcon.actions as actions
 
-filterbot = filter.Filter("Target project as int", ["keywords that the bot will", "delete"])
+project: int = 1234567890
+actions.login.login("username", "password")
+
+filterbot = filter.Filter(project, ["keywords that the bot will", "delete"])
+# Don't feel like adding your own keywords? There are presets!
+filterbot = filter.Filter(project, preset="mode")
+# Replace "mode" with light, medium or hard
 # Whenever you want to start it you just type
 filterbot.start_filter()
 ```
-
