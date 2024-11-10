@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scratchcon"
-version = "1.3.2b0"
+version = "1.3.4b0"
 description = "A Python library for interacting with the scratch.mit.edu API"
 authors = [
     {name = "-G1ad05-", email = "on67703@gmail.com"},
