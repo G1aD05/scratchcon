@@ -1,6 +1,6 @@
 LICENSE
 README.md
-setup.py
+pyproject.toml
 scratchcon/__init__.py
 scratchcon/common.py
 scratchcon/conn.py
@@ -20,3 +20,4 @@ scratchcon/actions/conn.py
 scratchcon/actions/login.py
 scratchcon/utils/__init__.py
 scratchcon/utils/auth.py
+scratchcon/utils/filterbot.py

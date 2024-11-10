@@ -9,6 +9,7 @@ class Connect:
 
     @staticmethod
     def connect_project(project: int):
+        public.project_id = project
         public.project_link = f"http://api.scratch.mit.edu/projects/{project}"
 
     @staticmethod
