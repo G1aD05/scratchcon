@@ -3,3 +3,4 @@ pyperclip==1.9.0
 requests==2.32.3
 scratchattach==2.1.4
 scratchcon==1.0.0b0
+
