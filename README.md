@@ -159,7 +159,6 @@ studio_actions.promote("user") # Promote a user
 ```
 **Here are some things you can do with the `connect_user()` method**
 ```python
-import scratchcon.actions as actions
 user_actions = actions.actions.User()
 
 user_actions.comment("message") # Post a comment
