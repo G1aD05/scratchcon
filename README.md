@@ -1,6 +1,10 @@
 # scratchcon
 >[!Note]
 >Please suggest or make a pull request for any ideas you have
+
+## Requirements
+`pip install -r requrements.txt`
+
 ## How to use
 **First, run this command in your terminal (make sure you have a venv activated): `python3 -m pip install scratchcon`**\
 **Then create a python file and type:**
@@ -152,13 +156,6 @@ studio_actions.add_project("project id") # Enter the project ID as an integer
 studio_actions.invite("user") # Invite a user
 
 studio_actions.promote("user") # Promote a user
-```
-## Requirements
-```text
-requests
-scratchattach
-pyperclip
-colorama
 ```
 
 # scratchcon.utils
