@@ -1,0 +1,8 @@
+# Ignore PyCharm project files
+.idea/
+
+# Ignore virtual environments
+.venv/
+
+# Ignore the Git directory (although it's unusual to ignore .git)
+.git/
