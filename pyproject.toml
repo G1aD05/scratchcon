@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scratchcon"
-version = "1.3.4-beta"
+version = "1.3.5-beta"
 description = "https://github.com/g1ad05/scratchcon"
 authors = [
     {name = "-G1ad05-", email = "on67703@gmail.com"},
