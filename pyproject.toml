@@ -10,6 +10,7 @@ authors = [
     {name = "-G1ad05-", email = "on67703@gmail.com"},
     {name = "webbrowser11", email = "terpstragraham@gmail.com"}
 ]
+readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "requests",
