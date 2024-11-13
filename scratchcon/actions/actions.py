@@ -8,14 +8,19 @@ user = None
 
 def load():
     global project, studio, user
-    project = public.login.connect_project(public.project_id)
-    studio = public.login.connect_studio(public.studio_id)
-    user = public.login.connect_user(public.username)
+    if public.project_id is not None:
+        project = public.login.connect_project(int(public.project_id))
+    if public.studio_id is not None:
+        studio = public.login.connect_studio(public.studio_id)
+    if public.username is not None:
+        user = public.login.connect_user(public.username)
 
 
 class Project:
     @staticmethod
     def post_comment(message):
+        if not public.login.mute_status == {}:
+            raise CurrentlyMuted("Cannot post comment while muted")
         project.post_comment(message)
 
     @staticmethod
