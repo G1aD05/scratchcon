@@ -6,7 +6,7 @@
 `pip install -r requirements.txt`
 
 ## How to use
-**First, run this command in your terminal (make sure you have a venv activated): `python3 -m pip install scratchcon`**\
+**First, run this command in your terminal (make sure you have a [venv](https://docs.python.org/3/library/venv.html) activated): `python3 -m pip install scratchcon`**\
 **Then create a python file and type:**
 ```python
 import scratchcon as con
@@ -14,7 +14,7 @@ import scratchcon as con
 conn = con.conn.Connect()
 ```
 
-**This sets up the connection class, here are some things you can connect:**
+**This sets up the connection [class](https://docs.python.org/3/tutorial/classes.html), here are some things you can connect:**
 ```python
 # Connect a project
 conn.conect_project() # Enter the project ID as an integer
@@ -109,7 +109,7 @@ user.is_st() # Returns if the user is scratch team
 import scratchcon.actions as actions
 actions.login.login("username", "password")
 ```
-**That logs into scratch, now here are some things you can connect:**
+**That logs into [scratch](https://scratch.mit.edu), now here are some things you can connect:**
 ```python
 # Project
 actions.conn.connect_project() # Enter the project ID as an integer
