@@ -1,6 +1,7 @@
 import requests
 from .exceptions import *
 from .common import public
+from urllib.request import urlretrieve
 
 
 class Project:
@@ -107,3 +108,7 @@ class Project:
             return response.json()
         else:
             raise FailedToRetrieve(f"Failed to retrieve project comments: {response.status_code}")
+
+    @staticmethod
+    def download_thumbnail(filename: str, size: str = "282x218"):
+        urlretrieve(requests.get(f"{public.project_link}").json()["images"][size], filename)

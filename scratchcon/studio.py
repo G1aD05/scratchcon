@@ -1,6 +1,7 @@
 from .exceptions import *
 from .common import public
 import requests
+from urllib.request import urlretrieve
 
 
 class Studio:
@@ -91,3 +92,7 @@ class Studio:
             return response.json()
         else:
             raise FailedToRetrieve(f"Failed to retrieve studio activity: {response.status_code}")
+
+    @staticmethod
+    def download_thumbnail(filename: str):
+        urlretrieve(requests.get(f"{public.studio_link}").json()["image"], filename)
