@@ -4,4 +4,8 @@
 # Ignore virtual environments
 .venv/
 
+# Ignore __pycache__ folders
 __pycache__
+
+# Ignore main.py
+main.py

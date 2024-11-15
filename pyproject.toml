@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scratchcon"
-version = "1.3.5-beta"
+version = "1.4.0"
 description = "https://github.com/g1ad05/scratchcon"
 authors = [
     {name = "-G1ad05-", email = "on67703@gmail.com"},
     {name = "webbrowser11", email = "terpstragraham@gmail.com"}
 ]
 readme = "README.md" # DONT REMOVE THIS!!!!! it was here then not here, then here then not here, and now here so dont touch it!
-requires-python = "3.9<"
+requires-python = ">=3.9"
 dependencies = [
     "requests",
     "scratchattach",

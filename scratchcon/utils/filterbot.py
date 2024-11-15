@@ -3,12 +3,13 @@ import requests
 
 
 class Filter:
-    def __init__(self, target_project: int, keywords: list[str] = None, preset: str = None):
+    def __init__(self, target_project: int, keywords: list[str] = None, preset: str = None, users: list[str] = None):
         self.project = public.login.connect_project(str(target_project))
         self.project_comments = requests.get(
             f'https://api.scratch.mit.edu/users/{requests.get(f"https://api.scratch.mit.edu/projects/{target_project}").json()["author"]["username"]}/projects/{target_project}/comments').json()
         self.target_project = target_project
         self.keywords = None
+        self.users = users
         if preset is not None:
             if preset == "light":
                 self.keywords = ['f4f', 'scratch.mit.edu/projects']
@@ -32,3 +33,9 @@ class Filter:
                         self.project.delete_comment(comment_id=str(comment['id']))
                     else:
                         pass
+            if self.users is not None:
+                for comment in self.project_comments:
+                    for user in self.users:
+                        if user.lower() in comment['author']['username'].lower():
+                            print(f"Found comment by {comment['author']['username']}")
+                            self.project.delete_comment(comment_id=str(comment['id']))

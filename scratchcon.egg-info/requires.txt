@@ -1,0 +1,4 @@
+requests
+scratchattach
+pyperclip
+colorama
