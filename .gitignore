@@ -9,3 +9,6 @@ __pycache__
 
 # Ignore main.py
 main.py
+
+# Ignore *.pyc files
+*.pyc
