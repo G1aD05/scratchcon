@@ -12,6 +12,3 @@ main.py
 
 # Ignore *.pyc files
 *.pyc
-
-# Ignore .DS_Store
-.DS_Store
